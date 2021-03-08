@@ -1,9 +1,6 @@
 package com.company;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 import java.util.stream.IntStream;
 
 public class Main {
@@ -13,7 +10,9 @@ public class Main {
 
         List<Student> stdList = new LinkedList<>();
         stdList.addAll(Arrays.asList(stud));
-
+        var sch = IntStream.rangeClosed(0, 2).mapToObj(i -> new School("H" + i)).toArray(School[]::new);
+        Set<School> schList = new TreeSet<>();
+        schList.addAll(Arrays.asList(sch));
     }
 
 
