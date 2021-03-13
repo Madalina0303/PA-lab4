@@ -41,38 +41,49 @@ public class Main {
     public void setPrefStud(Map<Student, List<School>> studPref, LinkedList<Student> studSort, List<School> sch) {
         studPref.put(studSort.get(0), sch);
         studPref.put(studSort.get(1), sch);
-        List<School> sch2 = new ArrayList<>();
+       /* List<School> sch2 = new ArrayList<>();
         sch2.add(sch.get(0));
         sch2.add(sch.get(1));
         studPref.put(studSort.get(2), sch2);
-        List<School> sch3 = new ArrayList<>();
+        */
+        studPref.put(studSort.get(2), Arrays.asList(sch.get(0), sch.get(1)));
+
+        /*List<School> sch3 = new ArrayList<>();
         sch3.add(sch.get(0));
         sch3.add(sch.get(2));
         studPref.put(studSort.get(3), sch3);
 
+         */
+        studPref.put(studSort.get(3), Arrays.asList(sch.get(0), sch.get(2)));
     }
 
     public void setPrefSchool(Map<School, List<Student>> schoolPref, LinkedList<Student> studSort, List<School> sch) {
-        List<Student> std0 = new ArrayList<>();
+       /* List<Student> std0 = new ArrayList<>();
         std0.add(studSort.get(3));
         std0.add(studSort.get(0));
         std0.add(studSort.get(1));
         std0.add(studSort.get(2));
 
         schoolPref.put(sch.get(0), std0);
-
+        */
+        schoolPref.put(sch.get(0), Arrays.asList(studSort.get(3), studSort.get(0), studSort.get(1), studSort.get(2)));
+        /*
         List<Student> std1 = new ArrayList<>();
         std1.add(studSort.get(0));
         std1.add(studSort.get(2));
         std1.add(studSort.get(1));
         schoolPref.put(sch.get(1), std1);
-
+         */
+        schoolPref.put(sch.get(1), Arrays.asList(studSort.get(0), studSort.get(2), studSort.get(1)));
+        /*
         List<Student> std2 = new ArrayList<>();
         std2.add(studSort.get(0));
         std2.add(studSort.get(1));
         std2.add(studSort.get(3));
         schoolPref.put(sch.get(2), std2);
 
+         */
+        schoolPref.put(sch.get(2), Arrays.asList(studSort.get(0), studSort.get(1), studSort.get(3)));
     }
 
     public void printPrefStud(Map<Student, List<School>> studPref) {
