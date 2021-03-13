@@ -1,10 +1,8 @@
 package com.company;
 
-import java.text.Collator;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 public class Main {
 
@@ -43,11 +41,11 @@ public class Main {
     public void setPrefStud(Map<Student, List<School>> studPref, LinkedList<Student> studSort, List<School> sch) {
         studPref.put(studSort.get(0), sch);
         studPref.put(studSort.get(1), sch);
-        List<School> sch2 = new ArrayList();
+        List<School> sch2 = new ArrayList<>();
         sch2.add(sch.get(0));
         sch2.add(sch.get(1));
         studPref.put(studSort.get(2), sch2);
-        List<School> sch3 = new ArrayList();
+        List<School> sch3 = new ArrayList<>();
         sch3.add(sch.get(0));
         sch3.add(sch.get(2));
         studPref.put(studSort.get(3), sch3);
