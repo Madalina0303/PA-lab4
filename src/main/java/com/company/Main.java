@@ -5,7 +5,7 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class Main {
-
+ // SKIPPPPP !!!!!!!!!!!!!!!!!!!
     public static void main(String[] args) {
 
         // Students -> linked list + sort - comparator
