@@ -39,4 +39,7 @@ public class Solution {
 
         }
     }
+    public Map<Student,School> getMatch(){
+        return  match;
+    }
 }
