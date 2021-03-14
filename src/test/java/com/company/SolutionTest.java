@@ -112,8 +112,10 @@ class SolutionTest {
         s.solve();
         assertTrue(s.getMatch().containsKey(stud.get(3)));
     }
-
+/*
     @Test
     void print() {
     }
+
+ */
 }
