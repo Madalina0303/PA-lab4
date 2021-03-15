@@ -1,9 +1,12 @@
 package com.company;
 
+import java.util.List;
+
 public class School implements Comparable {
     private String name;
-    private int capacity;
+    private int capacity; // optional
     private int nr;
+    private List<Student>equality;
 
     public School(String name) {
         this.name = name;
@@ -48,5 +51,12 @@ public class School implements Comparable {
             throw new ClassCastException("Uncomparable objects");
         School school = (School) o;
         return this.getName().compareTo(school.getName());
+    }
+    public List<Student> getEquality() {
+        return equality;
+    }
+
+    public void setEquality(List<Student> equality) {
+        this.equality = equality;
     }
 }

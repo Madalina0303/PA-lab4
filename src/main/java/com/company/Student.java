@@ -1,21 +1,31 @@
 package com.company;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Student {
     private String name;
     private double score; // optional- students have scores
-    private int nrCurrent;
-    private int nrOpt;
-    public Student(){
+    private int nrCurrent; // Bonus - Gale Shapley
+    private int nrOpt;// Bonus - Gale Shapley
+    private List<School> equality;
 
+    public Student() {
+        nrCurrent = 0;
+        equality = new ArrayList<>();
     }
+
     public Student(String name) {
-        this.name=name;
-        nrCurrent=0;
+        this.name = name;
+        nrCurrent = 0;
+        equality = new ArrayList<>();
     }
-    public void setName(String name){
-        this.name=name;
+
+    public void setName(String name) {
+        this.name = name;
     }
-    public String getName(){
+
+    public String getName() {
         return name;
     }
 
@@ -41,5 +51,13 @@ public class Student {
 
     public void setNrOpt(int nrOpt) {
         this.nrOpt = nrOpt;
+    }
+
+    public List<School> getEquality() {
+        return equality;
+    }
+
+    public void setEquality(List<School> equality) {
+        this.equality = equality;
     }
 }
